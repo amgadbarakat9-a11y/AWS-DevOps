@@ -10,11 +10,11 @@ pipeline {
        }
 
      stages {
-         stage ('Checkout') {
-             steps {
-               git 'https://github.com/amgadbarakat9-a11y/AWS-DevOps.git'
-                   }
-             }
+         stage('Checkout') {
+    steps {
+        git branch: 'main', url: 'https://github.com/amgadbarakat9-a11y/AWS-DevOps.git'
+    }
+}
          stage ('Terraform Init') {
             steps {
                  sh """
