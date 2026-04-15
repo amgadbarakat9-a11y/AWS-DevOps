@@ -1,0 +1,9 @@
+git
+github
+workflow-aggregator
+pipeline-stage-view
+aws-credentials
+pipeline-aws
+credentials-binding
+docker-workflow
+email-ext

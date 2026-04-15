@@ -2,22 +2,23 @@ FROM jenkins/jenkins:lts
 
 USER root
 
-
+# Install dependencies
 RUN apt-get update && apt-get install -y \
-curl \
-unzip \
-wget 
+    curl \
+    unzip \
+    wget \
+    && apt-get clean
 
+# Install Terraform
+RUN wget https://releases.hashicorp.com/terraform/1.6.6/terraform_1.6.6_linux_amd64.zip && \
+    unzip terraform_1.6.6_linux_amd64.zip && \
+    mv terraform /usr/local/bin/ && \
+    rm terraform_1.6.6_linux_amd64.zip
 
-RUN wget http://releases.hashicorp.com/terraform/1.14.8/terraform_1.14.8_linux_amd64.zip && \
-unzip terraform_1.14.8_linux_amd64.zip && \
-mv terraform /usr/local/bin/ && \
-rm terraform_1.14.8_linux_amd64.zip
-
+# Install Jenkins plugins (IMPORTANT 🔥)
+COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
+RUN jenkins-plugin-cli --plugin-file /usr/share/jenkins/ref/plugins.txt
 
 EXPOSE 8080
 
-
 USER jenkins
-
-
