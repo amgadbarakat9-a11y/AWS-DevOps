@@ -15,4 +15,6 @@ variable "region" {
     type = string
 }
 
-variable "public_key_path" {}
+variable "public_key_path" {
+    type = string
+}
