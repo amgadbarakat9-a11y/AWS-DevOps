@@ -19,7 +19,7 @@ pipeline {
     steps {
         sh """
             terraform init
-            terraform workspace select ${params.ENVIRONMENT}
+            terraform workspace select ${params.ENVIRONMENT} || terraform workspace new ${params.ENVIRONMENT}
         """
     }
 }
