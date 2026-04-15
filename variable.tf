@@ -11,6 +11,10 @@ variable "subnet2_cidr" {
     type = string
 }
 
+variable "ami_id" { 
+    type = string
+}
+
 variable "region" { 
     type = string
 }

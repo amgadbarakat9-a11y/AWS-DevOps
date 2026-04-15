@@ -1,5 +1,5 @@
 resource "aws_instance" "EC20" {
-  ami           = "ami-07062e2a343acc423"
+  ami           = var.ami_id
   instance_type = "t3.micro"
   key_name = "key0"
   subnet_id   = aws_subnet.sub1.id
@@ -14,7 +14,7 @@ resource "aws_instance" "EC20" {
 
 
 resource "aws_instance" "EC21" {
-  ami           = "ami-07062e2a343acc423"
+  ami           = var.ami_id
   instance_type = "t3.micro"
   key_name = "key0"
   subnet_id   = aws_subnet.sub2.id

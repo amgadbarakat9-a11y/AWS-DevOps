@@ -4,6 +4,8 @@ subnet1_cidr = "172.0.1.0/24"
 
 subnet2_cidr = "172.0.2.0/24"
 
+ami_id = "ami-05852c5f195d545ea"
+
 region = "eu-central-1"
 
 public_key_path = "~/.ssh/id_rsa.pub"
