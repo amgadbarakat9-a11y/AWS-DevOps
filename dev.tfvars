@@ -4,7 +4,7 @@ subnet1_cidr = "172.0.1.0/24"
 
 subnet2_cidr = "172.0.2.0/24"
 
-ami_id = "ami-05852c5f195d545ea"
+ami_id = "ami-027066fb16fc18634"
 
 region = "eu-central-1"
 
