@@ -4,5 +4,6 @@ module "network" {
     subnet1_cidr=var.subnet1_cidr
     subnet2_cidr=var.subnet2_cidr
     public_key_path = var.public_key_path
+    ami_id = var.ami_id
   region          = var.region
 }
