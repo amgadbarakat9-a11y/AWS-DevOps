@@ -32,4 +32,6 @@ resource "aws_instance" "EC21" {
 
 resource "aws_key_pair" "key" {
   key_name   = "key1"
-  public_key = file(var.public_key_path)}
+  public_key = file(var.public_key_path)
+  }
+  
