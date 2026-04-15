@@ -14,3 +14,5 @@ variable "subnet2_cidr" {
 variable "region" { 
     type = string
 }
+
+variable "public_key_path" {}

@@ -20,7 +20,7 @@ resource "aws_instance" "EC21" {
   subnet_id   = aws_subnet.sub2.id
   vpc_security_group_ids = [aws_security_group.sg2.id]
   provisioner "local-exec" {
-    command = "echo Public IP: ${self.public_ip}
+    command = "echo Public IP: ${self.public_ip}"
   }
 
   
@@ -32,5 +32,4 @@ resource "aws_instance" "EC21" {
 
 resource "aws_key_pair" "key" {
   key_name   = "key1"
-  public_key = file("/home/amgad/.ssh/id_rsa.pub")
-}
+  public_key = file(var.public_key_path)}
